@@ -11,9 +11,6 @@
 #include "Generuoti_failai_class.h"
 #include "Simple_class.h"
 
-#define CATCH_CONFIG_RUNNER
-#include "catch2/catch.hpp"
-
 using std::cin;
 using std::cout;
 using std::to_string;
@@ -21,28 +18,24 @@ using std::endl;
 using std::chrono::high_resolution_clock;
 using std::chrono::duration;
 
-int main(int argc, char* argv[]) {
+int main() {
     string versija_pr;
     int versija;
-    cout << "Ar norite dirbti su programa v1.0 versija (rasyti 1), ar su v1.1 versija (rasyti 2), ar su v1.2 versija (rasyti 3), ar su v1.5 versija (rasyti 4), ar su versija v2.0 (rasyti 5): ";
+    cout << "Ar norite dirbti su programa v1.0 versija (rasyti 1), ar su v1.1 versija (rasyti 2), ar su v1.2 versija (rasyti 3), ar su v1.5 versija (rasyti 4): ";
     while (true) {
         cin >> versija_pr;
         if (isNumber(versija_pr)) {
-            if (stoi(versija_pr) == 1 || stoi(versija_pr) == 2 || stoi(versija_pr) == 3||stoi(versija_pr)==4 || stoi(versija_pr) == 5) {
+            if (stoi(versija_pr) == 1 || stoi(versija_pr) == 2 || stoi(versija_pr) == 3||stoi(versija_pr)==4) {
                 versija = stoi(versija_pr);
                 break;
             }
             else {
-                cout << "Ivedete neteisinga duomeni (galima vesti tik 1, 2, 3, 4 arba 5): ";
+                cout << "Ivedete neteisinga duomeni (galima vesti tik 1, 2, 3 arba 4): ";
             }
         }
         else {
-            cout << "Ivedete neteisinga duomeni (galima vesti tik 1, 2, 3, 4 arba 5): ";
+            cout << "Ivedete neteisinga duomeni (galima vesti tik 1, 2, 3 arba 4): ";
         }
-    }
-    if (versija == 5) {
-        cout << "Testavimas su Catch2 testais"<<endl;
-        return Catch::Session().run(argc, argv);
     }
 
     if (versija == 4) {
@@ -722,6 +715,7 @@ int main(int argc, char* argv[]) {
             }
         }
     }
+    system("pause");
     return 0;
 }
 
