@@ -3,6 +3,13 @@
 This project is licensed under the GNU General Public License v3.0.  
 It also includes third-party code from Catch2, which is licensed under the Boost Software License 1.0.
 
+v3.0:
+  Įkelti programos įdiegimo failai Instaliacija.msi ir setup.exe. Norint instaliuoti programą reikia atsisiųsti ir paleisti failą Instaliacija.msi, tada
+  lange "Welcome" spausti "Next", lange "Select Installation Folder" jau yra parinktas teisingas aplankas, taigi spausti "Next", lange "Confirm Installation"
+  spausti "Next" ir kai prieinama prie lango "Installation Complete" spaudžiame "Close". Dabar jau galima paleisti programą iš darbalaukio arba aplanko, 
+  kuriame instaliuota programa. Norint programą ištrinti vėl reikia paleisti Instaliacija.msi ir spausti "Remove". Kai programa ją instaliuojant/ištrinant
+  iššoka langas "DO you want to allow this app from an unknown publisher to make changes to your device?" reikia spausti "Yes".
+
 v2.0:
   Panaudoti catch2 testai iš https://github.com/catchorg/Catch2/releases/tag/v2.13.10. Sukurti 5 testai Testavimas.cpp faile: TEST_CASE("Default constructor", "[Default]
   [Constructor]"), TEST_CASE("Copy constructor", "[Copy][Constructor]"), TEST_CASE("Copy Assignment operator", "[Copy][Assignment][Operator]"), TEST_CASE("Destructor" "
